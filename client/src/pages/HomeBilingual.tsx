@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import EnhancedHero from "@/components/EnhancedHero";
 import ServicesNoMotion from "@/components/ServicesNoMotion";
-import OdooSection from "@/components/OdooSection";
+import OdooSectionExpanded from "@/components/OdooSectionExpanded";
 import TechStackSphere from "@/components/TechStackSphere";
 import Interactive3DBuilding from "@/components/Interactive3DBuilding";
 import Footer from "@/components/Footer";
@@ -122,7 +122,7 @@ export default function HomeBilingual() {
       </section>
 
       {/* Odoo Section */}
-      <OdooSection />
+      <OdooSectionExpanded />
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24 relative overflow-hidden">
