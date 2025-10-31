@@ -80,8 +80,13 @@ export default function HomeBilingual() {
       <EnhancedHero />
       
       {/* Services Section */}
-      <section id="services" className="py-24">
-        <div className="container">
+      <section id="services" className="py-24 relative overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+        </div>
+        <div className="container relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("services.title")}</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -98,7 +103,7 @@ export default function HomeBilingual() {
               { icon: "📊", title: t("services.data.title"), desc: t("services.data.desc"), color: "from-green-500 to-emerald-500" },
               { icon: "☁️", title: t("services.cloud.title"), desc: t("services.cloud.desc"), color: "from-cyan-500 to-blue-500" },
             ].map((service, index) => (
-              <Card key={index} className="h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 border-border/50 hover:border-primary/50 group">
+              <Card key={index} className="h-full hover:shadow-lg hover:shadow-primary/10 smooth-transition border-border/50 hover:border-primary/50 group card-glow hover-lift">
                 <CardHeader>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 text-2xl`}>
                     {service.icon}
@@ -120,8 +125,12 @@ export default function HomeBilingual() {
       <OdooSection />
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-24">
-        <div className="container">
+      <section id="portfolio" className="py-24 relative overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-32 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        </div>
+        <div className="container relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("portfolio.title")}</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -131,7 +140,7 @@ export default function HomeBilingual() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 border-border/50 hover:border-primary/50 group overflow-hidden">
+              <Card key={index} className="h-full hover:shadow-lg hover:shadow-primary/10 smooth-transition border-border/50 hover:border-primary/50 group overflow-hidden card-glow hover-lift">
                 <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
                 <CardHeader>
                   <CardTitle className="text-2xl group-hover:text-primary transition-colors">
@@ -171,8 +180,12 @@ export default function HomeBilingual() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-muted/30">
-        <div className="container">
+      <section id="contact" className="py-24 bg-muted/30 relative overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div className="container relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("contact.title")}</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -182,7 +195,7 @@ export default function HomeBilingual() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="space-y-4">
-              <Card className="border-border/50">
+              <Card className="border-border/50 card-glow hover-lift">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -196,7 +209,7 @@ export default function HomeBilingual() {
                 </CardContent>
               </Card>
 
-              <Card className="border-border/50">
+              <Card className="border-border/50 card-glow hover-lift">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -210,7 +223,7 @@ export default function HomeBilingual() {
                 </CardContent>
               </Card>
 
-              <Card className="border-border/50">
+              <Card className="border-border/50 card-glow hover-lift">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -226,7 +239,7 @@ export default function HomeBilingual() {
             </div>
 
             <div className="lg:col-span-2">
-              <Card className="border-border/50">
+              <Card className="border-border/50 card-glow hover-lift">
                 <CardHeader>
                   <CardTitle>{t("contact.form.title")}</CardTitle>
                   <CardDescription>

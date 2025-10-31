@@ -104,8 +104,13 @@ export default function OdooSection() {
   ];
 
   return (
-    <section id="odoo" className="py-24 bg-gradient-to-b from-muted/30 to-background">
-      <div className="container">
+    <section id="odoo" className="py-24 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+      </div>
+      <div className="container relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-purple-500/10 text-purple-500 hover:bg-purple-500/20 border-purple-500/20">
@@ -120,8 +125,8 @@ export default function OdooSection() {
         </div>
 
         {/* Main Value Proposition */}
-        <div className="mb-16">
-          <Card className="border-2 border-purple-500/20 bg-gradient-to-br from-purple-500/5 to-indigo-500/5">
+        <div className="mb-16 animate-fade-in-up">
+          <Card className="border-2 border-purple-500/20 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 hover-lift card-glow">
             <CardContent className="p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -163,7 +168,7 @@ export default function OdooSection() {
             {odooServices.map((service, index) => (
               <Card 
                 key={index} 
-                className="h-full hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 border-border/50 hover:border-purple-500/50 group"
+                className="h-full hover:shadow-lg hover:shadow-purple-500/10 smooth-transition border-border/50 hover:border-purple-500/50 group card-glow hover-lift"
               >
                 <CardHeader>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform`}>
@@ -191,7 +196,7 @@ export default function OdooSection() {
             {odooModules.map((module, index) => (
               <Card 
                 key={index} 
-                className="text-center hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 border-border/50 hover:border-purple-500/50 group cursor-pointer"
+                className="text-center hover:shadow-lg hover:shadow-purple-500/10 smooth-transition border-border/50 hover:border-purple-500/50 group cursor-pointer card-glow hover-lift"
               >
                 <CardContent className="p-6">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${module.gradient} flex items-center justify-center mx-auto mb-3 text-white group-hover:scale-110 transition-transform`}>
@@ -206,7 +211,7 @@ export default function OdooSection() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <Card className="border-2 border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 inline-block">
+          <Card className="border-2 border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 inline-block hover-lift card-glow animate-subtle-pulse">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">{t("odoo.cta.title")}</h3>
               <p className="text-muted-foreground mb-6 max-w-xl">
