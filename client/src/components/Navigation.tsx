@@ -24,6 +24,7 @@ export default function Navigation() {
 
   const navItems = [
     { name: t("nav.services"), href: "#services" },
+    { name: t("nav.odoo"), href: "#odoo" },
     { name: t("nav.portfolio"), href: "#portfolio" },
     { name: t("nav.technologies"), href: "#technologies" },
     { name: t("nav.about"), href: "#about" },

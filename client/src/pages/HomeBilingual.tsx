@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import EnhancedHero from "@/components/EnhancedHero";
 import ServicesNoMotion from "@/components/ServicesNoMotion";
+import OdooSection from "@/components/OdooSection";
 import TechStackSphere from "@/components/TechStackSphere";
 import Interactive3DBuilding from "@/components/Interactive3DBuilding";
 import Footer from "@/components/Footer";
@@ -79,7 +80,7 @@ export default function HomeBilingual() {
       <EnhancedHero />
       
       {/* Services Section */}
-      <section id="services" className="py-24 bg-muted/30">
+      <section id="services" className="py-24">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("services.title")}</h2>
@@ -114,6 +115,9 @@ export default function HomeBilingual() {
           </div>
         </div>
       </section>
+
+      {/* Odoo Section */}
+      <OdooSection />
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24">
